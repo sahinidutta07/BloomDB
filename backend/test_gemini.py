@@ -1,0 +1,24 @@
+import os
+
+from dotenv import load_dotenv
+from langchain_google_genai import ChatGoogleGenerativeAI
+
+
+load_dotenv()
+
+api_key = os.getenv("GEMINI_API_KEY")
+
+if not api_key:
+    raise ValueError("GEMINI_API_KEY not found in .env")
+
+
+llm = ChatGoogleGenerativeAI(
+    model="gemini-3.8-flash",
+    google_api_key=api_key
+)
+
+
+response = llm.invoke("What is a database in one sentence?")
+
+print("\n===== GEMINI RESPONSE =====")
+print(response.content)
