@@ -5,10 +5,6 @@ from pydantic import BaseModel
 from query_pipeline import process_question
 
 
-# ============================================================
-# FASTAPI APP
-# ============================================================
-
 app = FastAPI(title="BloomDB")
 
 
@@ -21,6 +17,8 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+        "http://localhost:8080",
+        "http://127.0.0.1:8080",
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -34,29 +32,30 @@ app.add_middleware(
 
 class QuestionRequest(BaseModel):
     question: str
+    bloom_level: str | None = None
 
 
 # ============================================================
-# HOME ROUTE
+# HOME
 # ============================================================
 
 @app.get("/")
 def home():
-
     return {
         "message": "BloomDB backend is running!"
     }
 
 
 # ============================================================
-# ASK ROUTE
+# ASK BLOOMDB
 # ============================================================
 
 @app.post("/ask")
 def ask_question(request: QuestionRequest):
 
     bloom_level, answer, source_info = process_question(
-        request.question
+        request.question,
+        request.bloom_level
     )
 
     return {

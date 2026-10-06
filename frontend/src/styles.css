@@ -1,0 +1,158 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-display: "Silkscreen", ui-monospace, monospace;
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-emerald: var(--emerald);
+  --color-diamond: var(--diamond);
+  --color-gold: var(--gold);
+  --color-redstone: var(--redstone);
+  --color-xp: var(--xp);
+  --color-wood: var(--wood);
+  --color-wood-dark: var(--wood-dark);
+  --color-stone: var(--stone);
+  --color-stone-dark: var(--stone-dark);
+  --color-obsidian: var(--obsidian);
+  --color-iron: var(--iron);
+  --color-forest: var(--forest);
+}
+
+:root {
+  --background: oklch(0.17 0.012 150);
+  --foreground: oklch(0.93 0.01 120);
+  --card: oklch(0.23 0.01 150);
+  --card-foreground: oklch(0.93 0.01 120);
+  --popover: oklch(0.21 0.01 150);
+  --popover-foreground: oklch(0.93 0.01 120);
+  --primary: oklch(0.72 0.17 152);
+  --primary-foreground: oklch(0.16 0.03 152);
+  --secondary: oklch(0.3 0.01 150);
+  --secondary-foreground: oklch(0.93 0.01 120);
+  --muted: oklch(0.27 0.01 150);
+  --muted-foreground: oklch(0.68 0.015 130);
+  --accent: oklch(0.78 0.12 210);
+  --accent-foreground: oklch(0.15 0.03 220);
+  --destructive: oklch(0.58 0.2 27);
+  --destructive-foreground: oklch(0.97 0 0);
+  --border: oklch(0.34 0.01 150);
+  --input: oklch(0.3 0.01 150);
+  --ring: oklch(0.78 0.12 210);
+
+  --emerald: oklch(0.72 0.17 152);
+  --diamond: oklch(0.8 0.12 205);
+  --gold: oklch(0.82 0.15 85);
+  --redstone: oklch(0.58 0.21 27);
+  --xp: oklch(0.85 0.2 130);
+  --wood: oklch(0.52 0.08 60);
+  --wood-dark: oklch(0.36 0.06 55);
+  --stone: oklch(0.42 0.006 150);
+  --stone-dark: oklch(0.28 0.008 150);
+  --obsidian: oklch(0.14 0.02 290);
+  --iron: oklch(0.82 0.01 250);
+  --forest: oklch(0.24 0.04 150);
+
+  --bevel: inset 3px 3px 0 0 oklch(1 0 0 / 0.08), inset -3px -3px 0 0 oklch(0 0 0 / 0.35);
+  --bevel-strong: inset 4px 4px 0 0 oklch(1 0 0 / 0.18), inset -4px -4px 0 0 oklch(0 0 0 / 0.4);
+  --pixel-shadow: 4px 4px 0 0 oklch(0 0 0 / 0.5);
+  --texture-stone:
+    linear-gradient(45deg, oklch(1 0 0 / 0.025) 25%, transparent 25%, transparent 75%, oklch(1 0 0 / 0.025) 75%),
+    linear-gradient(45deg, oklch(0 0 0 / 0.06) 25%, transparent 25%, transparent 75%, oklch(0 0 0 / 0.06) 75%);
+  --texture-wood: repeating-linear-gradient(0deg, var(--wood) 0 14px, var(--wood-dark) 14px 16px);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html, body { background-color: var(--color-background); color: var(--color-foreground); font-family: var(--font-sans); }
+  body {
+    background-image: var(--texture-stone);
+    background-size: 16px 16px, 16px 16px;
+    background-position: 0 0, 8px 8px;
+  }
+  h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.02em; }
+  ::selection { background: var(--diamond); color: var(--obsidian); }
+}
+
+/* Panels */
+@utility panel {
+  background-color: var(--card);
+  border: 3px solid oklch(0 0 0 / 0.6);
+  box-shadow: var(--bevel), var(--pixel-shadow);
+}
+@utility panel-obsidian {
+  background-color: var(--obsidian);
+  background-image: var(--texture-stone);
+  background-size: 12px 12px;
+  border: 3px solid oklch(0 0 0 / 0.8);
+  box-shadow: inset 3px 3px 0 0 oklch(0.6 0.15 290 / 0.15), inset -3px -3px 0 0 oklch(0 0 0 / 0.5), var(--pixel-shadow);
+}
+@utility panel-wood {
+  background-image: var(--texture-wood);
+  border: 3px solid oklch(0 0 0 / 0.6);
+  box-shadow: var(--bevel-strong), var(--pixel-shadow);
+  color: oklch(0.97 0.02 80);
+}
+@utility slot {
+  background-color: var(--stone-dark);
+  border: 2px solid oklch(0 0 0 / 0.7);
+  box-shadow: inset 3px 3px 0 0 oklch(0 0 0 / 0.45), inset -2px -2px 0 0 oklch(1 0 0 / 0.08);
+}
+@utility slot-active {
+  background-color: oklch(0.38 0.01 150);
+  border: 2px solid var(--iron);
+  box-shadow: inset 0 0 0 2px oklch(0 0 0 / 0.6), 0 0 0 2px oklch(0 0 0 / 0.6);
+}
+@utility pixel-bar {
+  background-color: oklch(0.12 0.01 150);
+  border: 2px solid oklch(0 0 0 / 0.8);
+  box-shadow: inset 0 2px 0 0 oklch(0 0 0 / 0.5);
+}
+@utility pixelated { image-rendering: pixelated; }
+@utility text-shadow-pixel { text-shadow: 2px 2px 0 oklch(0 0 0 / 0.6); }
+
+/* Blocky buttons */
+@utility btn-block {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  font-family: var(--font-display); font-size: 0.8rem; text-transform: uppercase;
+  padding: 0.65rem 1.1rem; border: 3px solid oklch(0 0 0 / 0.75);
+  box-shadow: var(--bevel-strong), 3px 3px 0 0 oklch(0 0 0 / 0.5);
+  transition: transform 80ms, box-shadow 80ms, filter 120ms;
+  cursor: pointer;
+  &:hover { filter: brightness(1.1); }
+  &:active { transform: translate(3px, 3px); box-shadow: inset 4px 4px 0 0 oklch(0 0 0 / 0.3); }
+  &:disabled { opacity: 0.5; pointer-events: none; }
+}
+
+@keyframes block-in { from { opacity: 0; transform: translateY(8px) scale(0.98); } to { opacity: 1; transform: none; } }
+@keyframes mine { 0%,100% { opacity: 0.25 } 50% { opacity: 1 } }
+@keyframes float-block { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-8px) } }
+@utility animate-block-in { animation: block-in 0.35s steps(6) both; }
+@utility animate-mine { animation: mine 0.8s steps(3) infinite; }
+@utility animate-float-block { animation: float-block 3s steps(8) infinite; }

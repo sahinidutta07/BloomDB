@@ -1,0 +1,122 @@
+<svg width="512" height="512" viewBox="0 0 512 512"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <rect width="512" height="512" fill="transparent"/>
+
+  <!-- ========================= -->
+  <!-- TOP GRASS / CUBE SURFACE -->
+  <!-- ========================= -->
+
+  <polygon
+    points="256,55 435,150 256,245 77,150"
+    fill="#63C92F"
+  />
+
+  <!-- Grass pixel pattern -->
+  <polygon points="256,55 292,74 275,83 239,64" fill="#83DC42"/>
+  <polygon points="315,86 350,105 329,116 294,97" fill="#4BAF28"/>
+  <polygon points="205,82 239,64 262,76 228,94" fill="#72D638"/>
+  <polygon points="145,116 180,97 202,109 167,128" fill="#55BA2B"/>
+  <polygon points="350,105 390,126 367,138 328,116" fill="#72D638"/>
+  <polygon points="220,140 255,121 278,133 243,152" fill="#4EAE27"/>
+  <polygon points="292,158 330,138 353,151 315,171" fill="#78D63B"/>
+  <polygon points="160,153 198,132 220,144 182,165" fill="#68C933"/>
+  <polygon points="365,170 399,152 421,164 387,183" fill="#4DAE26"/>
+  <polygon points="107,150 140,132 161,143 128,162" fill="#78D83C"/>
+
+  <!-- Grass front edge -->
+  <polygon
+    points="77,150 256,245 435,150 435,190 256,286 77,190"
+    fill="#4EAF27"
+  />
+
+  <!-- Grass hanging pixels -->
+  <polygon points="105,164 138,181 138,215 105,198" fill="#58BC2A"/>
+  <polygon points="155,190 190,208 190,240 155,222" fill="#65C933"/>
+  <polygon points="212,219 247,237 247,270 212,251" fill="#4BA923"/>
+  <polygon points="300,222 335,203 335,235 300,253" fill="#56B829"/>
+  <polygon points="365,188 400,169 400,202 365,220" fill="#63C92F"/>
+
+  <!-- ================= -->
+  <!-- UPPER SOIL BLOCK -->
+  <!-- ================= -->
+
+  <polygon
+    points="77,190 256,286 435,190 435,274 256,370 77,274"
+    fill="#70401F"
+  />
+
+  <!-- Soil pixels -->
+  <polygon points="95,207 130,225 130,257 95,239" fill="#8D5228"/>
+  <polygon points="137,229 171,247 171,279 137,261" fill="#A35E2B"/>
+  <polygon points="183,253 217,271 217,303 183,285" fill="#77431F"/>
+  <polygon points="225,275 260,293 260,326 225,307" fill="#935326"/>
+
+  <polygon points="290,268 326,249 326,282 290,301" fill="#82491F"/>
+  <polygon points="335,244 370,225 370,258 335,277" fill="#9B5728"/>
+  <polygon points="380,220 414,202 414,235 380,253" fill="#6A3B1D"/>
+
+  <!-- Database separator -->
+  <polygon
+    points="77,274 256,370 435,274 435,293 256,389 77,293"
+    fill="#241A12"
+  />
+
+  <!-- ================= -->
+  <!-- MIDDLE DB LAYER -->
+  <!-- ================= -->
+
+  <polygon
+    points="77,293 256,389 435,293 435,368 256,463 77,368"
+    fill="#75421F"
+  />
+
+  <!-- Middle pixels -->
+  <polygon points="95,310 129,328 129,358 95,340" fill="#9B592A"/>
+  <polygon points="143,336 177,354 177,385 143,367" fill="#804820"/>
+  <polygon points="188,360 222,378 222,409 188,391" fill="#A45D2B"/>
+  <polygon points="234,383 268,401 268,432 234,414" fill="#70401E"/>
+
+  <polygon points="290,383 325,364 325,395 290,414" fill="#925126"/>
+  <polygon points="337,358 371,340 371,371 337,389" fill="#6C3D1C"/>
+  <polygon points="382,334 416,316 416,347 382,365" fill="#9C5828"/>
+
+  <!-- Database separator -->
+  <polygon
+    points="77,368 256,463 435,368 435,388 256,484 77,388"
+    fill="#21170F"
+  />
+
+  <!-- ================= -->
+  <!-- LOWER DB LAYER -->
+  <!-- ================= -->
+
+  <polygon
+    points="77,388 256,484 435,388 435,442 256,500 77,442"
+    fill="#63391C"
+  />
+
+  <!-- Lower pixels -->
+  <polygon points="96,402 130,420 130,447 96,429" fill="#8B4D24"/>
+  <polygon points="142,427 177,446 177,473 142,454" fill="#75411E"/>
+  <polygon points="190,452 224,470 224,496 190,478" fill="#925226"/>
+
+  <polygon points="289,451 323,433 323,460 289,478" fill="#81461F"/>
+  <polygon points="337,426 371,408 371,435 337,453" fill="#6B3B1B"/>
+  <polygon points="382,403 415,386 415,413 382,430" fill="#8D4E24"/>
+
+  <!-- ================= -->
+  <!-- DATABASE STATUS LEDS -->
+  <!-- ================= -->
+
+  <rect x="375" y="214" width="16" height="16" fill="#55FF45"/>
+  <rect x="375" y="318" width="16" height="16" fill="#55FF45"/>
+  <rect x="375" y="411" width="16" height="16" fill="#55FF45"/>
+
+  <!-- Pixel highlights -->
+  <rect x="145" y="218" width="14" height="14" fill="#A7C4C0"/>
+  <rect x="190" y="342" width="14" height="14" fill="#849A99"/>
+  <rect x="190" y="444" width="14" height="14" fill="#7E9290"/>
+
+</svg>
