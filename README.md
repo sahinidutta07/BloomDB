@@ -48,6 +48,7 @@ This allows BloomDB to provide learning experiences based on the cognitive compl
 ## Tech Stack
 
 **AI/ML:** Python, RAG, Embeddings, Vector Search, Bloom's Taxonomy, Google Gemini, ChromaDB
+
 **Backend:** FastAPI
 **Frontend:** React, TypeScript, TanStack Router, Tailwind CSS, Vite
 
